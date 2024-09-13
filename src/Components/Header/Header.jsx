@@ -26,7 +26,7 @@ const Header = () => {
         <nav className={`h01_nav-links ${isMenuOpen ? 'h01_open' : ''}`}>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/work">Work</Link>
+          <Link to="/work">Portfolio</Link>
           <Link to="/services">Services</Link>
         </nav>
         <Link to="/hitusup" className="h01_cta-button">Hit us up</Link>
