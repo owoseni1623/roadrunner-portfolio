@@ -20,7 +20,7 @@ const Header = () => {
     <header className={`h01_header ${isScrolled ? 'h01_scrolled' : ''}`}>
       <div className="h01_header-content">
         <Link to="/" className="h01_logo-link">
-          <img src="/path-to-your-logo.png" alt="Logo" className="h01_logo-image" />
+          <img src="/Images/logo1.jpeg" alt="Logo" className="h01_logo-image" />
           <span className="h01_brand-name">Roadrunner Tech Solution</span>
         </Link>
         <nav className={`h01_nav-links ${isMenuOpen ? 'h01_open' : ''}`}>
@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/work">Work</Link>
           <Link to="/services">Services</Link>
         </nav>
-        <Link to="/contact" className="h01_cta-button">Hit us up</Link>
+        <Link to="/hitusup" className="h01_cta-button">Hit us up</Link>
         <button className="h01_menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
