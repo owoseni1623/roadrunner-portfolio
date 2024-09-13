@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
 
+:root {
+  --primary-color: #00ffff;
+  --secondary-color: #ff00ff;
+  --accent-color: #ffff00;
+  --background-color: #111111;
+  --text-color: #ffffff;
+  --card-background: rgba(255, 255, 255, 0.1);
+  --gradient-1: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  --gradient-2: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+}
+
 .h01_header {
   position: fixed;
   top: 0;
@@ -46,6 +57,17 @@
   color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--primary-color);
+  animation: neonPulse 2s infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+  }
 }
 
 .h01_nav-links {
@@ -93,6 +115,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .h01_cta-button:hover {
@@ -113,45 +136,65 @@
   color: var(--primary-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .h01_header-content {
     flex-wrap: wrap;
     height: auto;
+    padding: 1rem 0;
   }
 
   .h01_nav-links {
-    display: none;
+    order: 3;
     width: 100%;
-    text-align: center;
-    padding: 0.5rem 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
   .h01_nav-links.h01_open {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .h01_menu-toggle {
     display: block;
+    order: 2;
   }
 
   .h01_cta-button {
+    order: 1;
     margin-left: auto;
+  }
+
+  .h01_logo-link {
+    margin-right: auto;
+  }
+
+  .h01_brand-name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .h01_header {
+    padding: 0.5rem 1rem;
+  }
+
+  .h01_logo-image {
+    max-height: 40px;
+  }
+
+  .h01_brand-name {
+    font-size: 0.8rem;
+  }
+
+  .h01_cta-button {
     font-size: 0.8rem;
     padding: 0.4rem 1rem;
   }
-}
 
-@keyframes neonPulse {
-  0%, 100% {
-    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color);
+  .h01_nav-links a {
+    font-size: 0.8rem;
   }
-  50% {
-    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-  }
-}
-
-.h01_brand-name {
-  animation: neonPulse 2s infinite;
 }
