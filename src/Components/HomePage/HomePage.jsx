@@ -132,7 +132,7 @@ const HomePage = () => {
             <p><strong>Marital Status:</strong> Married with 2 kids</p>
           </div>
           <div className="profile-image">
-            <img src="/Images/pics11.jpg" alt="Owoseni Oluwasesan Motunrayo" />
+            <img src="/Images/pics14.jpg" alt="Owoseni Oluwasesan Motunrayo" />
           </div>
         </div>
       </section>
