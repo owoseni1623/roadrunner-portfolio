@@ -100,7 +100,7 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-content">
               <div className="hero-image">
-                <img src="/Images/pics5.jpg" alt="Owoseni Oluwasesan Motunrayo" />
+                <img src="/Images/pics12.jpg" alt="Owoseni Oluwasesan Motunrayo" />
               </div>
           <div className="hero-text">
             <motion.h1 
