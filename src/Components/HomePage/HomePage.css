@@ -633,10 +633,12 @@ body {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
+    padding-bottom: 3rem;
   }
 
   .hero p {
     font-size: 1.6rem;
+    padding-bottom: 3rem;
   }
 
   .hero-image img {
