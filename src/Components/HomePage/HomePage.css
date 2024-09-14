@@ -29,14 +29,13 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--background-color);
   position: relative;
   overflow: hidden;
-  padding: 2rem;
 }
 
 .hero::before {
@@ -62,12 +61,11 @@ body {
 
 .hero-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 3rem;
   z-index: 1;
   max-width: 1200px;
-  width: 100%;
+  width: 90%;
 }
 
 .hero-image {
@@ -75,10 +73,9 @@ body {
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  max-height: 450px;
+  width: 300px;
+  height: 450px;
+  margin-top: 2rem;
   border-radius: 20px;
   object-fit: cover;
   border: 4px solid var(--primary-color);
@@ -86,12 +83,12 @@ body {
 }
 
 .hero-text {
-  text-align: center;
+  text-align: left;
 }
 
 .hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: -0.05em;
@@ -108,7 +105,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   max-width: 800px;
   text-shadow: 0 0 10px var(--secondary-color);
@@ -123,7 +120,7 @@ body {
 
 .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
   text-align: center;
   color: var(--primary-color);
@@ -131,16 +128,13 @@ body {
 
 .about-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 4rem;
 }
 
 .profile-image img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  max-height: 550px;
+  width: 300px;
+  height: 550px;
   border-radius: 20px;
   object-fit: cover;
   border: 4px solid var(--primary-color);
@@ -228,7 +222,7 @@ body {
 
 .projects h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin-bottom: 4rem;
   text-align: center;
   color: var(--primary-color);
@@ -250,7 +244,7 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 4rem;
   position: relative;
   z-index: 1;
@@ -402,7 +396,7 @@ body {
 
 .gallery h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
   text-align: center;
   color: var(--primary-color);
@@ -530,7 +524,7 @@ body {
 
 .cta h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 4rem;
+  font-size: 5.5rem;
   margin-bottom: 3rem;
   position: relative;
   z-index: 1;
@@ -543,13 +537,13 @@ body {
 .cta-button {
   display: inline-flex;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1.8rem 4rem;
   background-color: var(--background-color);
   color: var(--primary-color);
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   transition: all 0.4s ease;
   position: relative;
   z-index: 1;
@@ -574,7 +568,7 @@ body {
 
 .cta-button:hover {
   color: var(--background-color);
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
 }
 
@@ -592,6 +586,7 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet View */
 @media (max-width: 1024px) {
   .hero-content {
     flex-direction: column;
@@ -599,11 +594,11 @@ body {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .hero p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .about-content {
@@ -612,12 +607,12 @@ body {
   }
 
   .profile-image img {
-    max-width: 250px;
-    max-height: 400px;
+    width: 250px;
+    height: 400px;
   }
 
   .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .project-grid {
@@ -625,27 +620,29 @@ body {
   }
 
   .cta h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 
   .cta-button {
-    padding: 1.4rem 2.8rem;
-    font-size: 1.4rem;
+    padding: 1.6rem 3.5rem;
+    font-size: 1.6rem;
   }
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .hero-image img {
-    max-width: 200px;
-    max-height: 300px;
+    width: 200px;
+    height: 300px;
+    margin-top: 5rem;
   }
 
   .about-content {
@@ -653,12 +650,12 @@ body {
   }
 
   .profile-image img {
-    max-width: 200px;
-    max-height: 300px;
+    width: 200px;
+    height: 300px;
   }
 
   .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .project-grid {
@@ -671,12 +668,12 @@ body {
   }
 
   .cta h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .cta-button {
-    padding: 1.2rem 2.4rem;
-    font-size: 1.2rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.4rem;
   }
 
   .photo-grid {
@@ -689,36 +686,38 @@ body {
   }
 }
 
+/* Small Mobile View */
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .hero-image img {
-    max-width: 150px;
-    max-height: 225px;
-  }
-
-  .profile-image img {
-    max-width: 150px;
-    max-height: 225px;
-  }
-
-  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 2rem;
-  }
-
-  .cta h2 {
     font-size: 2.5rem;
   }
 
+  .hero p {
+    font-size: 1.4rem;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 225px;
+    margin-top: 8rem;
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 225px;
+  }
+
+  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta h2 {
+    font-size: 3rem;
+  }
+
   .cta-button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
   }
 }
 
