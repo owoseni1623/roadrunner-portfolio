@@ -29,13 +29,15 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--background-color);
   position: relative;
   overflow: hidden;
+  padding: 2rem 0;
 }
 
 .hero::before {
@@ -61,6 +63,7 @@ body {
 
 .hero-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 3rem;
   z-index: 1;
@@ -75,7 +78,6 @@ body {
 .hero-image img {
   width: 300px;
   height: 450px;
-  margin-top: 2rem;
   border-radius: 20px;
   object-fit: cover;
   border: 4px solid var(--primary-color);
@@ -83,7 +85,7 @@ body {
 }
 
 .hero-text {
-  text-align: left;
+  text-align: center;
 }
 
 .hero h1 {
@@ -111,6 +113,185 @@ body {
   text-shadow: 0 0 10px var(--secondary-color);
 }
 
+/* Rest of your CSS remains unchanged */
+
+/* Responsive Design */
+/* Tablet View */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 375px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 400px;
+  }
+
+  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
+    font-size: 3.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta h2 {
+    font-size: 4.5rem;
+  }
+
+  .cta-button {
+    padding: 1.6rem 3.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
+    font-size: 3rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta h2 {
+    font-size: 3.5rem;
+  }
+
+  .cta-button {
+    padding: 1.5rem 3rem;
+    font-size: 1.4rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 225px;
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 225px;
+  }
+
+  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta h2 {
+    font-size: 3rem;
+  }
+
+  .cta-button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0px); }
+}
+
+.project-card {
+  animation: float 8s ease-in-out infinite;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 2s;
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body:hover .cursor-trail {
+  opacity: 1;
+}
 /* About Me Section */
 .about-me, .contact-info, .skills, .education, .certifications, .gallery {
   padding: 6rem 2rem;
@@ -585,22 +766,8 @@ body {
   transform: translateX(8px);
 }
 
-/* Responsive Design */
-/* Tablet View */
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-
-  .hero p {
-    font-size: 1.8rem;
-  }
-
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -608,63 +775,16 @@ body {
 
   .profile-image img {
     width: 250px;
-    height: 400px;
-  }
-
-  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 3.5rem;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cta h2 {
-    font-size: 4.5rem;
-  }
-
-  .cta-button {
-    padding: 1.6rem 3.5rem;
-    font-size: 1.6rem;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 1.6rem;
-  }
-
-  .hero-image img {
-    width: 200px;
-    height: 300px;
-    margin-top: 5rem;
-  }
-
-  .about-content {
-    gap: 2rem;
-  }
-
-  .profile-image img {
-    width: 200px;
-    height: 300px;
-  }
-
-  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 3rem;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
+    height: 375px;
   }
 
   .skills-content {
     flex-direction: column;
     align-items: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .cta h2 {
@@ -675,84 +795,20 @@ body {
     padding: 1.5rem 3rem;
     font-size: 1.4rem;
   }
-
-  .photo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .contact-details {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
-/* Small Mobile View */
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.4rem;
-  }
-
-  .hero-image img {
-    width: 150px;
-    height: 225px;
-    margin-top: 8rem;
-  }
-
   .profile-image img {
-    width: 150px;
-    height: 225px;
-  }
-
-  .projects h2, .about-me h2, .contact-info h2, .skills h2, .education h2, .certifications h2, .gallery h2 {
-    font-size: 2.5rem;
+    width: 200px;
+    height: 300px;
   }
 
   .cta h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .cta-button {
     padding: 1.2rem 2.5rem;
     font-size: 1.2rem;
   }
-}
-
-/* Additional Animations */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px) rotate(2deg); }
-  100% { transform: translateY(0px); }
-}
-
-.project-card {
-  animation: float 8s ease-in-out infinite;
-}
-
-.project-card:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.project-card:nth-child(3) {
-  animation-delay: 2s;
-}
-
-/* Cursor trail effect */
-.cursor-trail {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-body:hover .cursor-trail {
-  opacity: 1;
 }
