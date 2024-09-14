@@ -98,6 +98,11 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <section className="hero">
+        <div className="hero-content">
+              <div className="hero-image">
+                <img src="/Images/pics12.jpg" alt="Owoseni Oluwasesan Motunrayo" />
+              </div>
+          <div className="hero-text">
             <motion.h1 
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,12 +110,6 @@ const HomePage = () => {
             >
               Owoseni Oluwasesan Motunrayo
             </motion.h1>
-        <div className="hero-content">
-              <div className="hero-image">
-                <img src="/Images/pics12.jpg" alt="Owoseni Oluwasesan Motunrayo" />
-              </div>
-          <div className="hero-text">
-            
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
