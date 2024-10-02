@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaMobileAlt, FaDatabase, FaRocket, FaCogs } from 'react-icons/fa';
+import { FaCode, FaServer, FaMobileAlt, FaDatabase, FaRocket, FaCogs, FaPalette } from 'react-icons/fa';
 import './Service.css';
 
 const services = [
@@ -42,17 +42,11 @@ const services = [
   }
 ];
 
-const designOptions = [
-  { name: "Dark", class: "dark" },
-  { name: "Modern", class: "modern" },
-  { name: "Classic", class: "classic" },
-  { name: "Minimalist", class: "minimalist" },
-  { name: "Vibrant", class: "vibrant" }
-];
+const designOptions = ["Dark", "Modern", "Classic", "Minimalist", "Vibrant"];
 
 const Service = () => {
   const [selectedService, setSelectedService] = useState(null);
-  const [currentDesign, setCurrentDesign] = useState(designOptions[0].class);
+  const [currentDesignIndex, setCurrentDesignIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,19 +55,20 @@ const Service = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const cycleDesign = () => {
+    setCurrentDesignIndex((prevIndex) => (prevIndex + 1) % designOptions.length);
+  };
+
   return (
-    <div className={`service-container ${currentDesign}`}>
-      <div className="design-switcher">
-        {designOptions.map((option, index) => (
-          <button
-            key={index}
-            className={`design-option ${currentDesign === option.class ? 'active' : ''}`}
-            onClick={() => setCurrentDesign(option.class)}
-          >
-            {option.name}
-          </button>
-        ))}
-      </div>
+    <div className={`service-container ${designOptions[currentDesignIndex].toLowerCase()}`}>
+      <motion.button
+        className="design-cycle-button"
+        onClick={cycleDesign}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <FaPalette /> Change Theme
+      </motion.button>
       <motion.h1 
         className="service-title"
         initial={{ opacity: 0, y: -50 }}

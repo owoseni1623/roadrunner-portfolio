@@ -254,61 +254,10 @@ const HomePage = () => {
         </ul>
       </section>
 
-      {/* New Enhanced Photo Gallery */}
       <EnhancedPhotoGallery />
-
-      {/* Original Photo Gallery (commented out) */}
-      {/*
-      <section className="gallery">
-        <h2>Photo Gallery</h2>
-        <div className="photo-grid">
-          {photos.map((photo) => (
-            <motion.div
-              key={photo.id}
-              className="photo-item"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => openModal(photo)}
-            >
-              <img src={photo.src} alt={photo.alt} />
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      <AnimatePresence>
-        {selectedPhoto && (
-          <motion.div
-            className="modal-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={closeModal}
-          >
-            <motion.div
-              className="modal-content"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button className="close-button" onClick={closeModal}>
-                <X size={24} />
-              </button>
-              <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
-              <p>{selectedPhoto.info}</p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      */}
 
       <section className="cta">
         <h2>Ready to collaborate on your next project?</h2>
-        {/* <a href="#contact" className="cta-button">
-          Let's Connect
-          <ChevronRight size={20} />
-        </a> */}
         <Link to="/connect" className="cta-button">
           Let's Connect
           <ChevronRight size={20} />

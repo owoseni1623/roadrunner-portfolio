@@ -11,11 +11,9 @@
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .service-container {
@@ -26,37 +24,28 @@ body {
   transition: all 0.5s ease;
 }
 
-.design-switcher {
+.design-cycle-button {
   position: fixed;
-  margin-top: 5rem;
   top: 30px;
   right: 30px;
-  display: flex;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.design-option {
-  padding: 8px 15px;
+  padding: 10px 20px;
   border: none;
   border-radius: 25px;
-  background-color: var(--card-background);
+  background-color: var(--primary-color);
   color: var(--text-color);
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-.design-option:hover {
-  background-color: var(--hover-color);
+.design-cycle-button:hover {
+  background-color: var(--secondary-color);
   transform: translateY(-2px);
-}
-
-.design-option.active {
-  background-color: var(--primary-color);
-  box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
 }
 
 .service-title {
@@ -144,39 +133,55 @@ body {
   transform: scale(1.05);
 }
 
-/* Modern Design */
-.modern {
-  --primary-color: #4a90e2;
-  --secondary-color: #50c878;
-  --accent-color: #ffd700;
-}
-
-/* Classic Design */
-.classic {
-  --primary-color: #8b4513;
-  --secondary-color: #daa520;
-  --accent-color: #f4a460;
-}
-
-/* Minimalist Design */
-.minimalist {
-  --primary-color: #333333;
-  --secondary-color: #666666;
-  --accent-color: #999999;
-}
-
-/* Vibrant Design */
-.vibrant {
-  --primary-color: #ff6b6b;
-  --secondary-color: #4ecdc4;
-  --accent-color: #feca57;
-}
-
-/* Dark Design */
+/* Theme Styles */
 .dark {
   --primary-color: #e94560;
   --secondary-color: #0f3460;
   --accent-color: #ff9800;
+  --text-color: #ffffff;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --hover-color: #2c2c2c;
+}
+
+.modern {
+  --primary-color: #4a90e2;
+  --secondary-color: #50c878;
+  --accent-color: #ffd700;
+  --text-color: #333333;
+  --background-color: #f5f5f5;
+  --card-background: #ffffff;
+  --hover-color: #e0e0e0;
+}
+
+.classic {
+  --primary-color: #8b4513;
+  --secondary-color: #daa520;
+  --accent-color: #f4a460;
+  --text-color: #333333;
+  --background-color: #f0e68c;
+  --card-background: #fffaf0;
+  --hover-color: #ffe4b5;
+}
+
+.minimalist {
+  --primary-color: #333333;
+  --secondary-color: #666666;
+  --accent-color: #999999;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --card-background: #f9f9f9;
+  --hover-color: #eeeeee;
+}
+
+.vibrant {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --accent-color: #feca57;
+  --text-color: #ffffff;
+  --background-color: #45aaf2;
+  --card-background: #2d98da;
+  --hover-color: #2e86de;
 }
 
 @media (max-width: 768px) {
@@ -198,34 +203,21 @@ body {
 }
 
 @keyframes gradientText {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(233, 69, 96, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(233, 69, 96, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(233, 69, 96, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(233, 69, 96, 0); }
 }
 
 .service-card.active {
   animation: pulse 2s infinite;
 }
 
-/* Enhanced animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -249,12 +241,6 @@ body {
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 .service-card:nth-child(6) { animation-delay: 0.6s; }
 
-/* Glowing effect for active elements */
-.design-option.active,
-.service-card.active {
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-
 @keyframes glow {
   from {
     box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color);
@@ -262,4 +248,8 @@ body {
   to {
     box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
   }
+}
+
+.service-card.active {
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
