@@ -27,8 +27,9 @@ body {
 .design-cycle-button {
   position: fixed;
   top: 30px;
+  width: 80px;
   right: 30px;
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
