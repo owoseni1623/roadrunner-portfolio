@@ -12,7 +12,7 @@ const Work = () => {
       title: "E-commerce Platform",
       description: "A full-stack e-commerce solution with real-time inventory management.",
       image: "/Images/app3.png",
-      technologies: ["React", "Node.js", "MongoDB", "Redux"],
+      technologies: ["React", "Express.js", "MongoDB", "Redux"],
       category: "Full Stack",
       liveLink: "https://food-delivery-mauve-mu.vercel.app/",
       githubLink: "owoseni1623/food-delivery / owoseni1623/food-delivery-api",
@@ -32,7 +32,7 @@ const Work = () => {
       title: "Weather Dashboard",
       description: "An interactive weather dashboard with location-based forecasts and historical data.",
       image: "/Images/app5.png",
-      technologies: ["React", "D3.js", "Node.js", "OpenWeatherMap API"],
+      technologies: ["React", "D3.js", "Express.js", "OpenWeatherMap API"],
       category: "Frontend",
       liveLink: "https://estate-ecom-qy6t.vercel.app/",
       githubLink: "owoseni1623/Estate-Ecom",
@@ -45,6 +45,26 @@ const Work = () => {
       technologies: ["Node.js", "Express", "MongoDB", "JWT"],
       category: "Frontend",
       liveLink: "https://roadrunner-hotel-booking.vercel.app/",
+      githubLink: "owoseni1623/roadrunner-hotel-booking",
+      icon: <Server />
+    },
+    {
+      title: "Weather Dashboard",
+      description: "An interactive weather dashboard with location-based forecasts and historical data.",
+      image: "/Images/app7.png",
+      technologies: ["React", "D3.js", "Express.js", "OpenWeatherMap API"],
+      category: "Backend",
+      liveLink: "https://estate-ecom-qy6t.vercel.app/",
+      githubLink: "owoseni1623/Estate-Ecom",
+      icon: <Code />
+    },
+    {
+      title: "RESTful API for Blog Platform",
+      description: "A scalable and secure API for a content management system with user authentication.",
+      image: "/Images/app8.png",
+      technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+      category: "Backend",
+      liveLink: "https://food-delivery-mauve-mu.vercel.app/",
       githubLink: "owoseni1623/roadrunner-hotel-booking",
       icon: <Server />
     }
