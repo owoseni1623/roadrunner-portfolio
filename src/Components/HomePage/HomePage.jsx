@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ExternalLink, Github, Mail, Phone, Facebook, Instagram, Twitter, MessageCircle, X } from 'lucide-react';
+import EnhancedPhotoGallery from "../EnhancedPhotoGallery/EnhancedPhotoGallery"
+import "../EnhancedPhotoGallery/EnhancedPhotoGallery.css";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -45,7 +47,6 @@ const HomePage = () => {
       githubLink: "https://github.com/yourusername/hotel-listing-app",
       liveLink: "https://hotel-listing-app-demo.com"
     },
-    
   ];
 
   const photos = [
@@ -182,7 +183,7 @@ const HomePage = () => {
             <h3>Frameworks</h3>
             <ul>
               <li>React</li>
-              <li>Node.js</li>
+              <li>Express.js</li>
             </ul>
           </div>
           <div className="skill-category">
@@ -253,6 +254,11 @@ const HomePage = () => {
         </ul>
       </section>
 
+      {/* New Enhanced Photo Gallery */}
+      <EnhancedPhotoGallery />
+
+      {/* Original Photo Gallery (commented out) */}
+      {/*
       <section className="gallery">
         <h2>Photo Gallery</h2>
         <div className="photo-grid">
@@ -295,6 +301,7 @@ const HomePage = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      */}
 
       <section className="cta">
         <h2>Ready to collaborate on your next project?</h2>
