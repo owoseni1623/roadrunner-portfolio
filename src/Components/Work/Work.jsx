@@ -14,6 +14,16 @@ const Work = () => {
       image: "/Images/app3.png",
       technologies: ["React", "Express.js", "MongoDB", "Redux"],
       category: "Full Stack",
+      liveLink: "https://grant-pi.vercel.app/",
+      githubLink: "owoseni1623/grant / owoseni1623/grant-api",
+      icon: <Layers />
+    },
+    {
+      title: "E-commerce Platform",
+      description: "A full-stack e-commerce solution with real-time inventory management.",
+      image: "/Images/app3.png",
+      technologies: ["React", "Express.js", "MongoDB", "Redux"],
+      category: "Full Stack",
       liveLink: "https://food-delivery-mauve-mu.vercel.app/",
       githubLink: "owoseni1623/food-delivery / owoseni1623/food-delivery-api",
       icon: <Layers />
