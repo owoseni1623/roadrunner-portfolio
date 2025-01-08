@@ -21,13 +21,13 @@ const FooterPage = () => {
           <Link to="/hitusup">Contact</Link>
         </div>
         <div className="footer-social">
-          <a href="https://www.facebook.com/share/1AAP9EVERx/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
             <Facebook size={20} />
           </a>
-          <a href="https://x.com/owoseni23?s=21" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
             <Twitter size={20} />
           </a>
-          <a href="https://www.instagram.com/omooba_owoseni?igsh=bnh6cHFrdGh2OTZh&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
             <Instagram size={20} />
           </a>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
