@@ -130,7 +130,7 @@ const HomePage = () => {
           <p>With extensive experience in web development, I bring a fresh perspective and cutting-edge skills to the table. My passion for crafting innovative digital solutions is matched only by my enthusiasm for tackling complex challenges head-on.</p>
           <p>With a strong foundation in both front-end and back-end technologies, I specialize in creating seamless, user-centric web applications that not only meet but exceed client expectations. My approach combines creativity with technical expertise, ensuring that every project I work on is both visually stunning and functionally robust.</p>
           <p>I thrive in collaborative environments where I can contribute my ideas while learning from experienced professionals. My goal is to leverage my skills and knowledge to create impactful solutions that drive business growth and enhance user experiences in the digital realm.</p>
-          <p><strong>Marital Status:</strong> Married with 2 kids</p>
+          
         </div>
 
           <div className="profile-image">
