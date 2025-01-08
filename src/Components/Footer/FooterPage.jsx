@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import "./FooterPage.css"
 
 const FooterPage = () => {
+  // Get current year dynamically
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -33,7 +36,7 @@ const FooterPage = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 roadrunner.org</p>
+        <p>&copy; {currentYear} roadrunner.org</p>
         <a href="#" className="back-to-top">
           Back to Top <ArrowRight size={16} />
         </a>
